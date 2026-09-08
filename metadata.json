@@ -1,0 +1,6 @@
+{
+  "name": "Ngecha Girls High School",
+  "description": "Official website for Ngecha Girls High School, Limuru, Kiambu County. Motto: Dream, Persist and Succeed. A public Christian-based secondary school empowering young women.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
