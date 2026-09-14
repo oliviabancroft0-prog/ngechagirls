@@ -124,53 +124,6 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
           </div>
         )}
 
-        {modalType === 'curriculum' && (
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <SchoolBadge size="sm" />
-              <div>
-                <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
-                  Academics & Pathways
-                </span>
-                <h3 className="text-2xl font-bold font-serif-heading text-[#0A5C36]">
-                  CBE Curriculum & Academic Program
-                </h3>
-              </div>
-            </div>
-
-            <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
-              <p>
-                Ngecha Girls High School implements the Kenyan Competency-Based Education (CBE) framework alongside comprehensive preparation for national examinations.
-                Our holistic academic structure emphasizes analytical thinking, practical STEM laboratory skills, and creative problem-solving.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
-                <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200">
-                  <div className="font-bold text-[#0A5C36] text-sm">STEM Pathway</div>
-                  <p className="text-[11px] text-gray-600 mt-1">Advanced laboratories for Biology, Chemistry, Physics, and Mathematics</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200">
-                  <div className="font-bold text-amber-800 text-sm">Social Sciences</div>
-                  <p className="text-[11px] text-gray-600 mt-1">History, Geography, and Christian Religious Education (CRE)</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200">
-                  <div className="font-bold text-blue-800 text-sm">Arts & Languages</div>
-                  <p className="text-[11px] text-gray-600 mt-1">English, Kiswahili, Literature, Business Studies, and Agriculture</p>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-700 space-y-2">
-                <h4 className="font-bold text-[#0A5C36]">Instructional Support:</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-600">
-                  <li>Supervised preps and individual academic consultation hours</li>
-                  <li>Equipped science laboratories and computerized digital learning center</li>
-                  <li>Academic mentorship by visiting female professionals and university alumni</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        )}
-
         {modalType === 'departments' && (
           <div>
             <div className="flex items-center gap-3 mb-4">

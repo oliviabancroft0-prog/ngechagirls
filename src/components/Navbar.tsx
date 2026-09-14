@@ -46,7 +46,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     {
       label: 'Academics',
       dropdown: [
-        { title: 'Curriculum & CBE Pathways', desc: 'Holistic secondary academic model', action: () => onOpenModal('curriculum') },
         { title: 'Academic Departments', desc: 'Sciences, Mathematics, Languages, Humanities', action: () => onOpenModal('departments') },
       ],
     },

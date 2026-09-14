@@ -76,11 +76,11 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => onOpenModal('curriculum')}
+                  onClick={() => onOpenModal('departments')}
                   className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 cursor-pointer"
                 >
                   <ArrowRight className="w-3 h-3 text-[#D4AF37]" />
-                  <span>Curriculum & Departments</span>
+                  <span>Academic Departments</span>
                 </button>
               </li>
               <li>
