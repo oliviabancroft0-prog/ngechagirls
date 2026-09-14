@@ -47,7 +47,7 @@ export default function App() {
           onNavigateSection={handleNavigateSection}
         />
 
-        {/* Section 2: Welcome from Principal Hellen Kahoro with official address */}
+        {/* Section 2: Welcome and Official Address from the Principal */}
         <PrincipalWelcome
           onOpenContact={() => handleNavigateSection('contact')}
         />

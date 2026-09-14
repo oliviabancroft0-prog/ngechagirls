@@ -91,7 +91,7 @@ export const MapAndContact: React.FC = () => {
                   </div>
                   <div>
                     <span className="block text-xs font-bold uppercase tracking-wider text-gray-400">
-                      Telephone / Principal: Hellen Kahoro
+                      Telephone / Principal's Office
                     </span>
                     <a
                       href={`tel:${SCHOOL_INFO.phone}`}
@@ -196,7 +196,7 @@ export const MapAndContact: React.FC = () => {
                   </h4>
                   <p className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
                     Thank you, <strong>{formData.name}</strong>. Your inquiry regarding{' '}
-                    <em>{formData.subject}</em> has been forwarded to Principal Hellen Kahoro and the administrative office.
+                    <em>{formData.subject}</em> has been forwarded to the Principal's Office and the administrative desk.
                   </p>
                   <div className="pt-2">
                     <button

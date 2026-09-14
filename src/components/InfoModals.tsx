@@ -242,7 +242,7 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                   and the Ministry of Education, uniting teachers, parents, and community members.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-medium text-gray-700">
-                  <div>• Principal & Secretary: Hellen Kahoro</div>
+                  <div>• Principal & Secretary to BOM</div>
                   <div>• Parents Association (PA) Representative</div>
                   <div>• PCEA Church Sponsor Oversight</div>
                   <div>• Ministry of Education Representation</div>
@@ -281,7 +281,7 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 font-medium text-gray-700">
                   <div className="p-2.5 rounded bg-white border border-gray-200">
                     <strong className="block text-gray-900">Principal & BOM Secretary:</strong>
-                    <span>Hellen Kahoro</span>
+                    <span>Chief Executive & Institutional Head</span>
                   </div>
                   <div className="p-2.5 rounded bg-white border border-gray-200">
                     <strong className="block text-gray-900">Parents Association (PA) Chair:</strong>

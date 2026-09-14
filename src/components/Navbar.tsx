@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     {
       label: 'About Us',
       dropdown: [
-        { title: "Principal's Welcome", desc: 'Message from Hellen Kahoro', action: () => onNavigateSection('principal') },
+        { title: "Principal's Welcome", desc: "Message from the Principal's desk", action: () => onNavigateSection('principal') },
         { title: 'School History & Heritage', desc: 'Our legacy in Limuru since establishment', action: () => onOpenModal('history') },
         { title: 'Mission, Vision & Motto', desc: 'Dream, Persist and Succeed', action: () => onOpenModal('mission') },
         { title: 'Board of Management', desc: 'Governance, sponsors & leadership', action: () => onOpenModal('board') },
@@ -284,7 +284,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>Contact Administration</span>
             </button>
             <div className="flex justify-center text-xs text-gray-500 gap-4">
-              <span>Principal: {SCHOOL_INFO.principal}</span>
+              <span>Principal's Office</span>
               <span>•</span>
               <a href={`tel:${SCHOOL_INFO.phone}`} className="text-[#0A5C36] font-semibold">
                 {SCHOOL_INFO.phoneDisplay}

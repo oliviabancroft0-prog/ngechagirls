@@ -129,11 +129,6 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <div className="space-y-3.5 text-xs text-emerald-100/90">
               <div>
-                <span className="block font-bold text-white">Principal:</span>
-                <span className="text-[#F9E8A2] font-semibold">{SCHOOL_INFO.principal}</span>
-              </div>
-
-              <div>
                 <span className="block font-bold text-white">Direct Phone:</span>
                 <a
                   href={`tel:${SCHOOL_INFO.phone}`}

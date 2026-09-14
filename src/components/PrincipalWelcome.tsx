@@ -27,7 +27,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
                   </div>
                   <div>
                     <h3 className="text-xl font-bold font-serif-heading text-[#F9E8A2]">
-                      Hellen Kahoro
+                      {SCHOOL_INFO.principal}
                     </h3>
                     <p className="text-xs text-emerald-200 uppercase tracking-widest font-semibold mt-0.5">
                       Principal & BOM Secretary
@@ -62,8 +62,8 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
                     <span className="font-medium text-emerald-800">Public Sub-County (Girls)</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-[#0A5C36]">Church Sponsor:</span>
-                    <span className="font-semibold text-gray-800">PCEA Church</span>
+                    <span className="font-bold text-[#0A5C36]">Institution Type:</span>
+                    <span className="font-semibold text-gray-800">Boarding & Day Options</span>
                   </div>
                 </div>
               </div>
