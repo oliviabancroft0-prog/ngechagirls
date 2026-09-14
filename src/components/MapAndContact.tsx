@@ -135,9 +135,6 @@ export const MapAndContact: React.FC = () => {
                     <span className="font-semibold text-gray-900 block mt-0.5">
                       Monday – Friday: 8:00 AM – 5:00 PM
                     </span>
-                    <span className="text-xs text-gray-500 block">
-                      Saturday (Office Desk): 9:00 AM – 1:00 PM
-                    </span>
                   </div>
                 </div>
               </div>

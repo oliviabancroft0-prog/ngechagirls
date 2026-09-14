@@ -57,7 +57,6 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                     <li>Accessible location in Ngecha Town, Limuru</li>
                     <li>Healthy hot lunch program for all day students</li>
                     <li>Equal access to laboratories, library, and faculty clinics</li>
-                    <li>Safe pickup and drop-off zones</li>
                   </ul>
                 </div>
 
@@ -241,12 +240,6 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                   The school operates under the leadership of the Board of Management, the PCEA church sponsorship,
                   and the Ministry of Education, uniting teachers, parents, and community members.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-medium text-gray-700">
-                  <div>• Principal & Secretary to BOM</div>
-                  <div>• Parents Association (PA) Representative</div>
-                  <div>• PCEA Church Sponsor Oversight</div>
-                  <div>• Ministry of Education Representation</div>
-                </div>
               </div>
 
               <p className="text-xs text-gray-500">
