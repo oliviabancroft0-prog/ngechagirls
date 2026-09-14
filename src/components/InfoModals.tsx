@@ -36,31 +36,18 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                   Student Accommodation & Care
                 </span>
                 <h3 className="text-2xl font-bold font-serif-heading text-[#0A5C36]">
-                  Boarding & Day Facilities
+                  Day and Boarding Facilities
                 </h3>
               </div>
             </div>
 
             <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
               <p>
-                Ngecha Girls High School provides modern boarding and day scholar facilities designed to nurture academic excellence,
+                Ngecha Girls High School provides modern day and boarding scholar facilities designed to nurture academic excellence,
                 discipline, and holistic personal development in a serene learning atmosphere in Ngecha Town, Limuru.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="p-3.5 rounded-xl border border-gray-200 bg-gray-50 space-y-1.5">
-                  <h4 className="font-bold text-[#0A5C36] flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
-                    Boarding Amenities
-                  </h4>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
-                    <li>Spacious, well-ventilated dormitories with hot water</li>
-                    <li>24/7 dedicated matrons and professional security team</li>
-                    <li>Supervised evening prep and silent study halls</li>
-                    <li>Balanced, nutritious meals prepared by trained kitchen staff</li>
-                  </ul>
-                </div>
-
                 <div className="p-3.5 rounded-xl border border-gray-200 bg-gray-50 space-y-1.5">
                   <h4 className="font-bold text-[#0A5C36] flex items-center gap-1.5">
                     <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
@@ -71,6 +58,19 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                     <li>Healthy hot lunch program for all day students</li>
                     <li>Equal access to laboratories, library, and faculty clinics</li>
                     <li>Safe pickup and drop-off zones</li>
+                  </ul>
+                </div>
+
+                <div className="p-3.5 rounded-xl border border-gray-200 bg-gray-50 space-y-1.5">
+                  <h4 className="font-bold text-[#0A5C36] flex items-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
+                    Boarding Amenities
+                  </h4>
+                  <ul className="list-disc list-inside text-gray-600 space-y-1">
+                    <li>Spacious, well-ventilated dormitories with hot water</li>
+                    <li>24/7 dedicated matrons and professional security team</li>
+                    <li>Supervised evening prep and silent study halls</li>
+                    <li>Balanced, nutritious meals prepared by trained kitchen staff</li>
                   </ul>
                 </div>
               </div>

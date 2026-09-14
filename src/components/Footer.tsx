@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="text-[11px] text-emerald-300/85 space-y-1 pt-1">
               <div><strong>Sponsor:</strong> Presbyterian Church of East Africa (PCEA)</div>
               <div><strong>Accreditation:</strong> Registered KNEC Examination Center</div>
-              <div><strong>Category:</strong> Girls Only (Boarding & Day)</div>
+              <div><strong>Category:</strong> Girls Only (Day & Boarding)</div>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 cursor-pointer"
                 >
                   <ArrowRight className="w-3 h-3 text-[#D4AF37]" />
-                  <span>Boarding & Day Facilities</span>
+                  <span>Day & Boarding Facilities</span>
                 </button>
               </li>
               <li>

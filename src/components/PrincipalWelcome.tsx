@@ -27,7 +27,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
                   </div>
                   <div>
                     <h3 className="text-xl font-bold font-serif-heading text-[#F9E8A2]">
-                      {SCHOOL_INFO.principal}
+                      Office of the Principal
                     </h3>
                     <p className="text-xs text-emerald-200 uppercase tracking-widest font-semibold mt-0.5">
                       Principal & BOM Secretary
@@ -63,7 +63,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="font-bold text-[#0A5C36]">Institution Type:</span>
-                    <span className="font-semibold text-gray-800">Boarding & Day Options</span>
+                    <span className="font-semibold text-gray-800">Day & Boarding Options</span>
                   </div>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
                 As a Christian-based public institution proudly sponsored by the Presbyterian Church of East Africa (PCEA),
                 our cardinal anchor is our school motto, <em>Dream, Persist and Succeed</em>.
                 We understand that academic brilliance without moral fortitude is incomplete. Whether our girls join us as
-                full boarders or day scholars, they are enveloped in an environment of strict pastoral care, spiritual mentorship through
+                day scholars or full boarders, they are enveloped in an environment of strict pastoral care, spiritual mentorship through
                 the Christian Union, and focused preparation for national assessments and examinations.
               </p>
               <p>

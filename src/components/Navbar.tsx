@@ -62,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     {
       label: 'Student Life',
       dropdown: [
-        { title: 'Boarding & Day Facilities', desc: 'Secure boarding dorms & day scholar options', action: () => onOpenModal('boarding') },
+        { title: 'Day & Boarding Facilities', desc: 'Day scholar options & secure boarding dorms', action: () => onOpenModal('boarding') },
         { title: 'Christian Union', desc: 'Spiritual foundation & fellowships', action: () => onOpenModal('christian-union') },
         { title: 'Clubs & Societies', desc: 'Debate, Science & Robotics, Girl Guides, Scouting', action: () => onOpenModal('clubs') },
         { title: 'Sports & Athletics', desc: 'Athletics, Volleyball, Netball & wellness', action: () => onOpenModal('sports') },

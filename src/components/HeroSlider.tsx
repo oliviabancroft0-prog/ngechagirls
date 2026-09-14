@@ -106,7 +106,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-black/40 backdrop-blur-sm border border-white/10">
               <Shield className="w-3.5 h-3.5 text-[#D4AF37]" />
-              Girls Only • Boarding & Day
+              Girls Only • Day & Boarding
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-black/40 backdrop-blur-sm border border-white/10">
               <Award className="w-3.5 h-3.5 text-[#D4AF37]" />

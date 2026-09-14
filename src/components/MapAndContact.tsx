@@ -277,8 +277,8 @@ export const MapAndContact: React.FC = () => {
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0A5C36] focus:border-transparent text-sm bg-white"
                       >
                         <option value="Secondary School Inquiry">Secondary School Program</option>
-                        <option value="Boarding Facilities Inquiry">Boarding Facilities</option>
                         <option value="Day Scholar Program">Day Scholar Program</option>
+                        <option value="Boarding Facilities Inquiry">Boarding Facilities</option>
                         <option value="General Inquiry">General Information</option>
                       </select>
                     </div>
@@ -296,7 +296,7 @@ export const MapAndContact: React.FC = () => {
                     >
                       <option value="General School Inquiry">General School Inquiry</option>
                       <option value="Curriculum & CBE / KCSE">Curriculum & Academic Inquiries</option>
-                      <option value="Boarding Accommodation">Boarding Accommodation</option>
+                      <option value="Day & Boarding Options">Day & Boarding Options</option>
                       <option value="Christian Union & Student Life">Christian Union & Student Life</option>
                     </select>
                   </div>

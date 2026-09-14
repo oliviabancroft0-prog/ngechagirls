@@ -42,7 +42,7 @@ export const AboutAndStats: React.FC<AboutAndStatsProps> = () => {
                   <CheckCircle className="w-3.5 h-3.5" />
                 </div>
                 <span>
-                  <strong>Boarding & Day Scholars:</strong> Flexible options providing hygienic dormitories, round-the-clock security, and well-managed daily commutes.
+                  <strong>Day & Boarding Scholars:</strong> Flexible options providing well-managed daily commutes, hygienic dormitories, and round-the-clock security.
                 </span>
               </div>
 
