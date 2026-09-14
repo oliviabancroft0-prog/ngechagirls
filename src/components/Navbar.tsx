@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     {
       label: 'Academics',
       dropdown: [
-        { title: 'Academic Departments', desc: 'Sciences, Mathematics, Languages, Humanities', action: () => onOpenModal('departments') },
+        { title: 'Academic Departments', desc: 'Mathematics, Sciences, Languages, Social Sciences & Technical', action: () => onOpenModal('departments') },
       ],
     },
     {
@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       dropdown: [
         { title: 'Day & Boarding Facilities', desc: 'Day scholar options & secure boarding dorms', action: () => onOpenModal('boarding') },
         { title: 'Christian Union', desc: 'Spiritual foundation & fellowships', action: () => onOpenModal('christian-union') },
-        { title: 'Clubs & Societies', desc: 'Debate, Science & Robotics, Girl Guides, Scouting', action: () => onOpenModal('clubs') },
+        { title: 'Clubs & Societies', desc: 'Debate, Journalism, Girl Guides & Scouting', action: () => onOpenModal('clubs') },
         { title: 'Sports & Athletics', desc: 'Athletics, Volleyball, Netball & wellness', action: () => onOpenModal('sports') },
       ],
     },

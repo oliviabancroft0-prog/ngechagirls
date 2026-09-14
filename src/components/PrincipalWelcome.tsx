@@ -97,7 +97,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
             {/* Message Body */}
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
               <p>
-                On behalf of the Board of Management, dedicated teaching faculty, support staff, and student body,
+                On behalf of the Board of Management, dedicated teaching staff, support staff, and student body,
                 it gives me immense pleasure to welcome you to the official portal of <strong>Ngecha Girls High School</strong>.
                 Located in the cool, serene heights of Ngecha Town, Limuru, our school offers a secure and conducive sanctuary
                 for holistic secondary education.
@@ -139,7 +139,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-5 h-5 text-[#0A5C36] shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm font-medium text-gray-700">
-                  PCEA church sponsorship & dedicated faculty
+                  PCEA church sponsorship & dedicated teachers
                 </span>
               </div>
             </div>

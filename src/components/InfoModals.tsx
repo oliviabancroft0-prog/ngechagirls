@@ -56,7 +56,7 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                   <ul className="list-disc list-inside text-gray-600 space-y-1">
                     <li>Accessible location in Ngecha Town, Limuru</li>
                     <li>Healthy hot lunch program for all day students</li>
-                    <li>Equal access to laboratories, library, and faculty clinics</li>
+                    <li>Equal access to laboratories and library</li>
                   </ul>
                 </div>
 
@@ -130,7 +130,7 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
               <SchoolBadge size="sm" />
               <div>
                 <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
-                  Academic Faculties
+                  Academic Departments
                 </span>
                 <h3 className="text-2xl font-bold font-serif-heading text-[#0A5C36]">
                   Academic Departments & Subject Offerings
@@ -366,9 +366,6 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                   <strong className="text-[#0A5C36]">Debate & Public Speaking Society:</strong> Regular participation in county debate championships.
                 </div>
                 <div className="p-3 rounded border border-gray-200">
-                  <strong className="text-[#0A5C36]">Science & STEM Club:</strong> Robotics, chemistry practical exhibitions, and Kenya Science and Engineering Fair.
-                </div>
-                <div className="p-3 rounded border border-gray-200">
                   <strong className="text-[#0A5C36]">Journalism & Creative Arts Club:</strong> School chronicle, creative writing, photography, and public address presentation.
                 </div>
                 <div className="p-3 rounded border border-gray-200">
@@ -399,16 +396,11 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                 through a rich athletics and games calendar:
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-bold">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs font-bold">
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Volleyball</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Netball</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Track & Athletics</div>
-                <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Table Tennis & Badminton</div>
               </div>
-
-              <p className="text-xs text-gray-500">
-                Our teams compete actively in Sub-County and Kiambu County secondary school sports associations.
-              </p>
             </div>
           </div>
         )}

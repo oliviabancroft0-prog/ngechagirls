@@ -99,9 +99,9 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 
 export const ACADEMIC_DEPARTMENTS: AcademicDepartment[] = [
   {
-    name: 'Mathematics & STEM',
+    name: 'Mathematics Department',
     head: 'Head of Mathematics Department',
-    subjects: ['Pure Mathematics', 'Alternative A Mathematics'],
+    subjects: ['Pure Mathematics', 'Essential Mathematics'],
     description: 'Dedicated to demystifying mathematics for young women, building problem-solving speed, precision, and confidence.',
   },
   {
@@ -111,21 +111,21 @@ export const ACADEMIC_DEPARTMENTS: AcademicDepartment[] = [
     description: 'Equipped with dedicated practical laboratories for national examination experiments, fostering future doctors, engineers, and scientists.',
   },
   {
-    name: 'Languages & Communication',
+    name: 'Languages Department',
     head: 'Head of Languages',
     subjects: ['English Language & Literature', 'Kiswahili na Fasihi'],
     description: 'Nurturing eloquent public speakers, critical essayists, debate champions, and creative literary minds.',
   },
   {
-    name: 'Humanities & Social Sciences',
-    head: 'Head of Humanities',
-    subjects: ['Christian Religious Education (C.R.E)', 'History & Government', 'Geography'],
-    description: 'Instilling civic awareness, historical depth, environmental stewardship, and deep Christian theological reflection.',
+    name: 'Social Sciences',
+    head: 'Head of Social Sciences',
+    subjects: ['Christian Religious Education (C.R.E)', 'History & Government', 'Geography', 'Business Studies'],
+    description: 'Instilling civic awareness, historical depth, environmental stewardship, business acumen, and Christian theological reflection.',
   },
   {
-    name: 'Applied & Technical Studies',
+    name: 'Technical Studies',
     head: 'Head of Technical Subjects',
-    subjects: ['Business Studies', 'Agriculture', 'Computer Studies'],
-    description: 'Equipping girls with practical entrepreneurial competencies, modern agribusiness understanding, and digital productivity.',
+    subjects: ['Agriculture', 'Computer Studies', 'Home Science'],
+    description: 'Equipping girls with practical entrepreneurial competencies, modern agribusiness understanding, home science, and digital productivity.',
   },
 ];
