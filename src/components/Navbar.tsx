@@ -4,13 +4,11 @@ import { SchoolBadge } from './SchoolBadge';
 import { SCHOOL_INFO } from '../data';
 
 interface NavbarProps {
-  onOpenAdmissions: () => void;
   onOpenModal: (type: string) => void;
   onNavigateSection: (sectionId: string) => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  onOpenAdmissions,
   onOpenModal,
   onNavigateSection,
 }) => {
@@ -57,25 +55,16 @@ export const Navbar: React.FC<NavbarProps> = ({
     {
       label: 'Academics',
       dropdown: [
-        { title: 'Curriculum & CBC Pathways', desc: 'Holistic secondary academic model', action: () => onOpenModal('curriculum') },
+        { title: 'Curriculum & CBE Pathways', desc: 'Holistic secondary academic model', action: () => onOpenModal('curriculum') },
         { title: 'Academic Departments', desc: 'Sciences, Mathematics, Languages, Humanities', action: () => onOpenModal('departments') },
-        { title: 'KCSE Performance & Results', desc: 'Examination analysis & university transition', action: () => onOpenModal('kcse') },
-      ],
-    },
-    {
-      label: 'Admissions',
-      dropdown: [
-        { title: 'Boarding & Day Facilities', desc: 'Secure boarding dorms & day scholar options', action: () => onOpenModal('admissions') },
-        { title: '2027 Fees Structure', desc: 'Transparent Ministry & school fee schedule', action: () => onOpenModal('fees') },
-        { title: 'Requirements & Guidelines', desc: 'Grade 10 admission requirements & uniform list', action: () => onOpenModal('requirements') },
-        { title: 'Apply Online', desc: 'Submit application for 2027 intake', action: () => onOpenAdmissions() },
       ],
     },
     {
       label: 'Student Life',
       dropdown: [
-        { title: 'Christian Union & Chapel', desc: 'Spiritual foundation & weekend fellowships', action: () => onOpenModal('christian-union') },
-        { title: 'Clubs & Societies', desc: 'Debate, Science & Robotics, Red Cross, Scouting', action: () => onOpenModal('clubs') },
+        { title: 'Boarding & Day Facilities', desc: 'Secure boarding dorms & day scholar options', action: () => onOpenModal('boarding') },
+        { title: 'Christian Union', desc: 'Spiritual foundation & fellowships', action: () => onOpenModal('christian-union') },
+        { title: 'Clubs & Societies', desc: 'Debate, Science & Robotics, Girl Guides, Scouting', action: () => onOpenModal('clubs') },
         { title: 'Sports & Athletics', desc: 'Athletics, Volleyball, Netball & wellness', action: () => onOpenModal('sports') },
       ],
     },
@@ -193,13 +182,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Header Action Button (Apply Now) */}
+          {/* Header Action Button */}
           <div className="hidden sm:flex items-center gap-3">
             <button
-              onClick={onOpenAdmissions}
+              onClick={() => onNavigateSection('contact')}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#0A5C36] hover:bg-[#074528] text-white text-sm font-bold shadow-sm hover:shadow-md transition-all cursor-pointer border border-[#0A5C36]"
             >
-              <span>Apply for 2027</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
             </button>
           </div>
@@ -207,10 +196,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile Menu Toggle Button */}
           <div className="flex xl:hidden items-center gap-2">
             <button
-              onClick={onOpenAdmissions}
+              onClick={() => onNavigateSection('contact')}
               className="sm:hidden px-3 py-1.5 rounded text-xs font-bold bg-[#0A5C36] text-white"
             >
-              Apply
+              Contact
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -287,12 +276,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
-                onOpenAdmissions();
+                onNavigateSection('contact');
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-md bg-[#0A5C36] text-white font-bold shadow hover:bg-[#074528]"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-md bg-[#0A5C36] text-white font-bold shadow hover:bg-[#074528] cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-              <span>Enrollment Now Open 2027</span>
+              <Phone className="w-4 h-4 text-[#D4AF37]" />
+              <span>Contact Administration</span>
             </button>
             <div className="flex justify-center text-xs text-gray-500 gap-4">
               <span>Principal: {SCHOOL_INFO.principal}</span>

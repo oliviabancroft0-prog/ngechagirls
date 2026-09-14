@@ -1,12 +1,8 @@
 import React from 'react';
-import { Mail, Phone, ExternalLink, Sparkles, MessageCircle } from 'lucide-react';
+import { Mail, Phone, ExternalLink, MessageCircle } from 'lucide-react';
 import { SCHOOL_INFO } from '../data';
 
-interface TopBarProps {
-  onOpenAdmissions: () => void;
-}
-
-export const TopBar: React.FC<TopBarProps> = ({ onOpenAdmissions }) => {
+export const TopBar: React.FC = () => {
   return (
     <div className="bg-[#074528] text-white text-xs border-b border-[#0A5C36]/60 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-3">
@@ -25,33 +21,21 @@ export const TopBar: React.FC<TopBarProps> = ({ onOpenAdmissions }) => {
           <a
             href={`tel:${SCHOOL_INFO.phone}`}
             className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-colors"
-            title="Call the Principal / Admissions Office"
+            title="Call the Principal's Office"
           >
             <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="font-medium">{SCHOOL_INFO.phoneDisplay}</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-1.5 text-emerald-200/80 border-l border-emerald-700/50 pl-4">
-            <span className="font-semibold text-[#D4AF37]">KNEC Code:</span>
-            <span>{SCHOOL_INFO.knecCode}</span>
-            <span className="mx-1">•</span>
-            <span className="font-semibold text-[#D4AF37]">UIC:</span>
-            <span>{SCHOOL_INFO.uicCode}</span>
+            <span className="font-semibold text-[#D4AF37]">Sponsor:</span>
+            <span>PCEA Church</span>
           </div>
         </div>
 
-        {/* Admissions Announcement & Socials */}
+        {/* Social Links */}
         <div className="flex items-center gap-3 sm:gap-4 ml-auto">
-          <button
-            onClick={onOpenAdmissions}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#D4AF37] hover:bg-[#b89324] text-[#0A5C36] font-bold tracking-wide transition-all shadow-sm cursor-pointer"
-          >
-            <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-            <span>Admissions 2027 Open</span>
-          </button>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-2 text-gray-200 border-l border-emerald-700/60 pl-3">
+          <div className="flex items-center gap-2 text-gray-200">
             {/* Facebook Icon */}
             <a
               href="https://facebook.com"
@@ -72,7 +56,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onOpenAdmissions }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="p-1 rounded hover:bg-[#0A5C36] hover:text-[#25D366] transition-colors"
-              title="Chat with Us on WhatsApp (0722947935)"
+              title="Chat with Us on WhatsApp (0770245635)"
               aria-label="WhatsApp"
             >
               <MessageCircle className="w-3.5 h-3.5" />

@@ -9,17 +9,6 @@ export interface NavItem {
   }[];
 }
 
-export interface NewsArticle {
-  id: string;
-  title: string;
-  category: 'Admissions' | 'Academics' | 'Christian Union' | 'Campus Life';
-  date: string;
-  author: string;
-  image: string;
-  excerpt: string;
-  content: string[];
-}
-
 export interface StatItem {
   value: string;
   label: string;

@@ -13,14 +13,6 @@ import { InfoModals } from './components/InfoModals';
 export default function App() {
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
-  const handleOpenAdmissions = () => {
-    setActiveModal('admissions');
-  };
-
-  const handleOpenResults = () => {
-    setActiveModal('kcse');
-  };
-
   const handleOpenModal = (modalKey: string) => {
     setActiveModal(modalKey);
   };
@@ -39,11 +31,10 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#1A1A1A]">
       {/* 1. Top Bar */}
-      <TopBar onOpenAdmissions={handleOpenAdmissions} />
+      <TopBar />
 
-      {/* 2. Sticky Header / Navigation with Multi-Academy Trust style dropdowns */}
+      {/* 2. Sticky Header / Navigation */}
       <Navbar
-        onOpenAdmissions={handleOpenAdmissions}
         onOpenModal={handleOpenModal}
         onNavigateSection={handleNavigateSection}
       />
@@ -52,44 +43,40 @@ export default function App() {
       <main className="flex-grow">
         {/* Section 1: Hero Slider with Cross & Empowering Young Women in Faith & Knowledge */}
         <HeroSlider
-          onOpenAdmissions={handleOpenAdmissions}
-          onOpenResults={handleOpenResults}
+          onOpenContact={() => handleNavigateSection('contact')}
+          onNavigateSection={handleNavigateSection}
         />
 
         {/* Section 2: Welcome from Principal Hellen Kahoro with official address */}
         <PrincipalWelcome
-          onOpenAdmissions={handleOpenAdmissions}
           onOpenContact={() => handleNavigateSection('contact')}
         />
 
-        {/* Section 3: About Snippet + Stats Bar (100% Transition, Accredited Center, Pastoral Care) */}
+        {/* Section 3: About Snippet + Stats Bar */}
         <AboutAndStats
-          onOpenAdmissions={handleOpenAdmissions}
           onOpenModal={handleOpenModal}
         />
 
         {/* Gallery Section: Authentic Kenyan school life */}
         <GallerySection />
 
-        {/* Section 7: Location Map (Ngecha Town, Limuru) + Contact form */}
+        {/* Section 4: Location Map (Ngecha Town, Limuru) + Contact form */}
         <MapAndContact />
       </main>
 
       {/* 4. Footer (Trust style - dark green): 4 columns */}
       <Footer
-        onOpenAdmissions={handleOpenAdmissions}
         onOpenModal={handleOpenModal}
         onNavigateSection={handleNavigateSection}
       />
 
-      {/* WhatsApp Floating Button linked to 0722947935 */}
+      {/* WhatsApp Floating Button linked to 0770245635 */}
       <WhatsAppFloating />
 
       {/* Dynamic Institutional Modals */}
       <InfoModals
         modalType={activeModal}
         onClose={handleCloseModal}
-        onOpenAdmissions={handleOpenAdmissions}
       />
     </div>
   );

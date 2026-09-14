@@ -11,7 +11,7 @@ export const WhatsAppFloating: React.FC = () => {
       {showTooltip && (
         <div className="hidden sm:flex items-center gap-2 bg-white text-gray-800 text-xs py-2 px-3.5 rounded-full shadow-lg border border-gray-200 animate-in fade-in slide-in-from-right-3">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-          <span className="font-semibold text-gray-700">Admissions Chat (0722947935)</span>
+          <span className="font-semibold text-gray-700">School Office Chat (0770245635)</span>
           <button
             onClick={() => setShowTooltip(false)}
             className="text-gray-400 hover:text-gray-600 p-0.5 ml-1 cursor-pointer"
@@ -28,7 +28,7 @@ export const WhatsAppFloating: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-        title="Chat on WhatsApp with Ngecha Girls High School (0722947935)"
+        title="Chat on WhatsApp with Ngecha Girls High School (0770245635)"
         aria-label="WhatsApp Chat"
       >
         {/* Pulsing ring */}

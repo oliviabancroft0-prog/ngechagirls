@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Award, Shield, BookOpen } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Award, Shield, BookOpen, Church } from 'lucide-react';
 import { HERO_SLIDES, SCHOOL_INFO } from '../data';
 
 interface HeroSliderProps {
-  onOpenAdmissions: () => void;
-  onOpenResults: () => void;
+  onOpenContact?: () => void;
+  onNavigateSection?: (sectionId: string) => void;
 }
 
 export const HeroSlider: React.FC<HeroSliderProps> = ({
-  onOpenAdmissions,
-  onOpenResults,
+  onOpenContact,
+  onNavigateSection,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -79,7 +79,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
               <path d="M10 2h4v7h7v4h-7v13h-4V13H3V9h7V2z" />
             </svg>
             <span className="text-xs font-bold tracking-widest uppercase text-[#F9E8A2]">
-              {SCHOOL_INFO.mottoUpper}
+              {SCHOOL_INFO.mottoUpper} • PCEA CHURCH SPONSORED
             </span>
           </div>
 
@@ -93,43 +93,48 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
 
           {/* Description */}
           <p className="mt-5 text-base sm:text-lg text-gray-200 leading-relaxed max-w-2xl font-normal drop-shadow">
-            A distinguished public Christian-based secondary institution in Ngecha Town, Limuru, Kiambu County.
-            Nurturing holistic academic achievement, deep Christian character, and confident female leadership.
+            A distinguished public Christian-based secondary institution in Ngecha Town, Limuru, Kiambu County,
+            proudly sponsored by the <strong>Presbyterian Church of East Africa (PCEA)</strong>.
+            Nurturing holistic academic achievement, Christian character, and confident female leadership.
           </p>
 
           {/* Key Quick Badges */}
           <div className="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-gray-300">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#0A5C36]/70 backdrop-blur-sm border border-[#D4AF37]/50 text-[#F9E8A2] font-medium">
+              <Church className="w-3.5 h-3.5 text-[#D4AF37]" />
+              PCEA Church Sponsored
+            </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-black/40 backdrop-blur-sm border border-white/10">
               <Shield className="w-3.5 h-3.5 text-[#D4AF37]" />
               Girls Only • Boarding & Day
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-black/40 backdrop-blur-sm border border-white/10">
               <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
-              KNEC Center 11211339
+              Registered KNEC Center
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-black/40 backdrop-blur-sm border border-white/10">
               <BookOpen className="w-3.5 h-3.5 text-[#D4AF37]" />
-              Grade 10 Admissions 2027
+              Public Sub-County School
             </span>
           </div>
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <button
-              onClick={onOpenAdmissions}
+              onClick={onOpenContact}
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded bg-[#D4AF37] hover:bg-[#b89324] text-[#0A5C36] font-extrabold text-base tracking-wide transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
             >
-              <span>Apply Now</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-
-            <button
-              onClick={onOpenResults}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded bg-white/95 hover:bg-white text-gray-900 font-bold text-base transition-all shadow-md hover:shadow-lg backdrop-blur-sm hover:text-[#0A5C36] cursor-pointer"
-            >
-              <span>Our Results</span>
-              <Award className="w-5 h-5 text-[#0A5C36]" />
-            </button>
+            {onNavigateSection && (
+              <button
+                onClick={() => onNavigateSection('about')}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded bg-white/95 hover:bg-white text-gray-900 font-bold text-base transition-all shadow-md hover:shadow-lg backdrop-blur-sm hover:text-[#0A5C36] cursor-pointer"
+              >
+                <span>About Our School</span>
+              </button>
+            )}
           </div>
         </div>
       </div>

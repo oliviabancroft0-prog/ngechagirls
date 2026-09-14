@@ -3,13 +3,10 @@ import { Award, Users, BookOpen, MapPin, CheckCircle, ShieldCheck } from 'lucide
 import { SCHOOL_INFO, STATS } from '../data';
 
 interface AboutAndStatsProps {
-  onOpenAdmissions: () => void;
   onOpenModal?: (key: string) => void;
 }
 
-export const AboutAndStats: React.FC<AboutAndStatsProps> = ({
-  onOpenAdmissions,
-}) => {
+export const AboutAndStats: React.FC<AboutAndStatsProps> = () => {
   return (
     <section id="about" className="py-20 lg:py-28 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +33,7 @@ export const AboutAndStats: React.FC<AboutAndStatsProps> = ({
                   <CheckCircle className="w-3.5 h-3.5" />
                 </div>
                 <span>
-                  <strong>Christian-Based Affiliation:</strong> Daily devotions, weekly Christian Union rallies, and pastoral mentoring rooted in our motto, <em>Dream, Persist and Succeed</em>.
+                  <strong>Sponsored by PCEA Church:</strong> Grounded in Christian principles under Presbyterian Church of East Africa pastoral care, Christian Union fellowships, and mentoring rooted in our motto, <em>Dream, Persist and Succeed</em>.
                 </span>
               </div>
 
@@ -54,7 +51,7 @@ export const AboutAndStats: React.FC<AboutAndStatsProps> = ({
                   <CheckCircle className="w-3.5 h-3.5" />
                 </div>
                 <span>
-                  <strong>Accredited Examination Hub:</strong> Registered KNEC Center 11211339 (UIC: TCPD) with consistent university and college placement.
+                  <strong>Accredited Examination Hub:</strong> Registered KNEC Examination Center with consistent university and college placement.
                 </span>
               </div>
             </div>
@@ -159,12 +156,6 @@ export const AboutAndStats: React.FC<AboutAndStatsProps> = ({
               <span className="font-semibold text-[#D4AF37]">Affiliation:</span>
               <span>{SCHOOL_INFO.affiliation}</span>
             </div>
-            <button
-              onClick={onOpenAdmissions}
-              className="px-4 py-2 rounded bg-[#D4AF37] hover:bg-[#b89324] text-[#0A5C36] font-bold text-xs cursor-pointer ml-auto"
-            >
-              Enroll for 2027 Intake
-            </button>
           </div>
         </div>
       </div>

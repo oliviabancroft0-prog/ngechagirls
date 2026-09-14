@@ -7,8 +7,8 @@ export const MapAndContact: React.FC = () => {
     name: '',
     phone: '',
     email: '',
-    studentLevel: 'Grade 10 Intake (2027)',
-    subject: 'Admission Inquiry',
+    studentLevel: 'Secondary School Inquiry',
+    subject: 'General School Inquiry',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -136,19 +136,19 @@ export const MapAndContact: React.FC = () => {
                       Monday – Friday: 8:00 AM – 5:00 PM
                     </span>
                     <span className="text-xs text-gray-500 block">
-                      Saturday (Admissions Desk): 9:00 AM – 1:00 PM
+                      Saturday (Office Desk): 9:00 AM – 1:00 PM
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Ministry Codes Badge */}
+              {/* Ministry Accreditation Badge */}
               <div className="p-3.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex items-center justify-between">
                 <div>
-                  <span className="font-bold">KNEC Center Code:</span> {SCHOOL_INFO.knecCode}
+                  <span className="font-bold">Accreditation:</span> Registered KNEC Exam Center
                 </div>
                 <div>
-                  <span className="font-bold">UIC:</span> {SCHOOL_INFO.uicCode}
+                  <span className="font-bold">Sponsor:</span> PCEA Church
                 </div>
               </div>
             </div>
@@ -182,7 +182,7 @@ export const MapAndContact: React.FC = () => {
                   Send an Inquiry
                 </h3>
                 <p className="text-sm text-gray-500 mt-1">
-                  Fill out the form below and the Admissions Office will respond via phone or email within 24 hours.
+                  Fill out the form below and the school administration will respond via phone or email.
                 </p>
               </div>
 
@@ -196,7 +196,7 @@ export const MapAndContact: React.FC = () => {
                   </h4>
                   <p className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
                     Thank you, <strong>{formData.name}</strong>. Your inquiry regarding{' '}
-                    <em>{formData.subject}</em> has been forwarded to Principal Hellen Kahoro and the admissions desk.
+                    <em>{formData.subject}</em> has been forwarded to Principal Hellen Kahoro and the administrative office.
                   </p>
                   <div className="pt-2">
                     <button
@@ -206,8 +206,8 @@ export const MapAndContact: React.FC = () => {
                           name: '',
                           phone: '',
                           email: '',
-                          studentLevel: 'Grade 10 Intake (2027)',
-                          subject: 'Admission Inquiry',
+                          studentLevel: 'Secondary School Inquiry',
+                          subject: 'General School Inquiry',
                           message: '',
                         });
                       }}
@@ -269,18 +269,17 @@ export const MapAndContact: React.FC = () => {
                     {/* Level / Class of Interest */}
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">
-                        Level of Interest
+                        Area of Interest
                       </label>
                       <select
                         value={formData.studentLevel}
                         onChange={(e) => setFormData({ ...formData, studentLevel: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0A5C36] focus:border-transparent text-sm bg-white"
                       >
-                        <option value="Grade 10 Intake (2027)">Grade 10 Intake (2027)</option>
-                        <option value="Form 2 Transfer">Form 2 Transfer</option>
-                        <option value="Form 3 Transfer">Form 3 Transfer</option>
-                        <option value="Boarding Facilities Inquiry">Boarding Facilities Inquiry</option>
+                        <option value="Secondary School Inquiry">Secondary School Program</option>
+                        <option value="Boarding Facilities Inquiry">Boarding Facilities</option>
                         <option value="Day Scholar Program">Day Scholar Program</option>
+                        <option value="General Inquiry">General Information</option>
                       </select>
                     </div>
                   </div>
@@ -295,11 +294,10 @@ export const MapAndContact: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0A5C36] focus:border-transparent text-sm bg-white"
                     >
-                      <option value="Admission Inquiry">Admission & Joining Instructions</option>
-                      <option value="School Fees Structure">School Fees & Subsidies</option>
-                      <option value="Curriculum & KCSE">Curriculum & Academic Performance</option>
-                      <option value="Boarding / Dormitory Accommodation">Boarding Accommodation</option>
-                      <option value="General Administration">General Office Inquiry</option>
+                      <option value="General School Inquiry">General School Inquiry</option>
+                      <option value="Curriculum & CBE / KCSE">Curriculum & Academic Inquiries</option>
+                      <option value="Boarding Accommodation">Boarding Accommodation</option>
+                      <option value="Christian Union & Student Life">Christian Union & Student Life</option>
                     </select>
                   </div>
 
@@ -311,7 +309,7 @@ export const MapAndContact: React.FC = () => {
                     <textarea
                       required
                       rows={4}
-                      placeholder="Please share any specific questions regarding your daughter's admission, boarding preferences, or academic background..."
+                      placeholder="Please share any specific inquiries or messages for the administration..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0A5C36] focus:border-transparent text-sm transition-all"
