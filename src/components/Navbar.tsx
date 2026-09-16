@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         { title: 'Day & Boarding Facilities', desc: 'Day scholar options & secure boarding dorms', action: () => onOpenModal('boarding') },
         { title: 'Christian Union', desc: 'Spiritual foundation & fellowships', action: () => onOpenModal('christian-union') },
         { title: 'Clubs & Societies', desc: 'Debate, Journalism, Girl Guides & Scouting', action: () => onOpenModal('clubs') },
-        { title: 'Sports & Athletics', desc: 'Athletics, Volleyball, Netball & wellness', action: () => onOpenModal('sports') },
+        { title: 'Sports & Athletics', desc: 'Football, Athletics, Volleyball, Netball', action: () => onOpenModal('sports') },
       ],
     },
     {

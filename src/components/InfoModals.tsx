@@ -396,7 +396,8 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                 through a rich athletics and games calendar:
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs font-bold">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-bold">
+                <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Football</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Volleyball</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Netball</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Track & Athletics</div>
