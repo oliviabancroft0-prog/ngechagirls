@@ -150,7 +150,7 @@ export const PrincipalWelcome: React.FC<PrincipalWelcomeProps> = ({
                 onClick={onOpenContact}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#0A5C36] hover:bg-[#074528] text-white font-bold text-sm shadow transition-all cursor-pointer"
               >
-                <span>Contact the Principal</span>
+                <span>Contact School Administration</span>
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
               </button>
             </div>

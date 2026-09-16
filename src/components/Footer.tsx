@@ -185,7 +185,7 @@ export const Footer: React.FC<FooterProps> = ({
               onClick={() => onNavigateSection('principal')}
               className="hover:text-[#D4AF37] transition-colors cursor-pointer"
             >
-              Principal's Office
+              Principal's Welcome
             </button>
             <span>•</span>
             <button

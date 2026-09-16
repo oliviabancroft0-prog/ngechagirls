@@ -274,7 +274,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>Contact Administration</span>
             </button>
             <div className="flex justify-center text-xs text-gray-500 gap-4">
-              <span>Principal's Office</span>
+              <span>Direct Office Line</span>
               <span>•</span>
               <a href={`tel:${SCHOOL_INFO.phone}`} className="text-[#0A5C36] font-semibold">
                 {SCHOOL_INFO.phoneDisplay}

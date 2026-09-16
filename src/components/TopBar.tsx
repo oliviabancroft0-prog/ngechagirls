@@ -21,7 +21,7 @@ export const TopBar: React.FC = () => {
           <a
             href={`tel:${SCHOOL_INFO.phone}`}
             className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-colors"
-            title="Call the Principal's Office"
+            title="Call Direct Office Line"
           >
             <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="font-medium">{SCHOOL_INFO.phoneDisplay}</span>

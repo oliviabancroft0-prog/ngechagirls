@@ -25,6 +25,11 @@ export const SCHOOL_INFO = {
     accent: '#E8F5E9', // Light Green
     darkText: '#1A1A1A',
   },
+  coordinates: {
+    lat: -1.168780998659567,
+    lng: 36.67058604955375,
+  },
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=-1.168780998659567,36.67058604955375',
   whatsappUrl: 'https://wa.me/254770245635?text=Hello%20Ngecha%20Girls%20High%20School%2C%20I%20would%20like%20to%20get%20in%20touch.',
 };
 
