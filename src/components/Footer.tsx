@@ -169,49 +169,14 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
       </div>
 
-      {/* Bottom Bar: Copyright and Attribution */}
+      {/* Bottom Bar: Copyright */}
       <div className="bg-[#031d10] border-t border-emerald-900 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300/80">
-          <div className="text-center sm:text-left">
-            <span>© 2027 Ngecha Girls High School. Public Christian-Based Institution.</span>
-            <span className="hidden sm:inline mx-2">•</span>
-            <span className="block sm:inline mt-1 sm:mt-0 text-emerald-400">
-              All Rights Reserved.
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 text-[11px]">
-            <button
-              onClick={() => onNavigateSection('principal')}
-              className="hover:text-[#D4AF37] transition-colors cursor-pointer"
-            >
-              Principal's Welcome
-            </button>
-            <span>•</span>
-            <button
-              onClick={() => onNavigateSection('contact')}
-              className="hover:text-[#D4AF37] transition-colors cursor-pointer"
-            >
-              Limuru, Kiambu
-            </button>
-            <span>•</span>
-            <button
-              onClick={() => onOpenModal('sitemap')}
-              className="hover:text-[#D4AF37] transition-colors cursor-pointer font-medium"
-            >
-              Site Index
-            </button>
-            <span>•</span>
-            <a
-              href="/sitemap.xml"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#D4AF37] transition-colors font-mono text-[10px] bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800 text-emerald-200"
-              title="Open XML Sitemap"
-            >
-              sitemap.xml
-            </a>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-emerald-300/80">
+          <span>© 2027 Ngecha Girls High School.</span>
+          <span className="inline mx-2">•</span>
+          <span className="text-emerald-400">
+            All Rights Reserved.
+          </span>
         </div>
       </div>
     </footer>

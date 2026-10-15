@@ -15,7 +15,7 @@ export const MapAndContact: React.FC = () => {
             Visit Our School
           </h2>
           <p className="text-base text-gray-600">
-            We warmly welcome parents, guardians, and education stakeholders to Ngecha Town, Limuru.
+            We warmly welcome parents, guardians, and education stakeholders to Ngecha Girls High School.
           </p>
         </div>
 
