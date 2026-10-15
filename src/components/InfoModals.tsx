@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Phone, CheckCircle, Award, BookOpen, Heart, Users, Shield, Sparkles } from 'lucide-react';
+import { X, Phone, CheckCircle, Award, BookOpen, Heart, Users, Shield, Sparkles, MapPin, FileCode, ExternalLink, Compass } from 'lucide-react';
 import { SCHOOL_INFO, ACADEMIC_DEPARTMENTS } from '../data';
 import { SchoolBadge } from './SchoolBadge';
 
@@ -401,6 +401,148 @@ export const InfoModals: React.FC<InfoModalsProps> = ({
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Volleyball</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Netball</div>
                 <div className="p-3 bg-gray-50 rounded border border-gray-200 text-gray-800">Track & Athletics</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {modalType === 'sitemap' && (
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <SchoolBadge size="sm" />
+              <div>
+                <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider flex items-center gap-1.5">
+                  <Compass className="w-3.5 h-3.5" />
+                  Website Architecture & Index
+                </span>
+                <h3 className="text-2xl font-bold font-serif-heading text-[#0A5C36]">
+                  School Website Sitemap & Directory
+                </h3>
+              </div>
+            </div>
+
+            <div className="space-y-6 text-sm text-gray-600 leading-relaxed">
+              <p>
+                Browse all sections, academic resources, student life programs, and official contact channels of Ngecha Girls High School:
+              </p>
+
+              {/* Main Sections */}
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-[#0A5C36]" />
+                  Main Portal Sections
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <a
+                    href="#home"
+                    onClick={onClose}
+                    className="p-3 rounded-lg border border-gray-200 hover:border-[#0A5C36] hover:bg-emerald-50/50 transition-colors block"
+                  >
+                    <div className="font-bold text-gray-900">Home & Hero Banner</div>
+                    <div className="text-gray-500">Christian foundation, motto & slider highlights</div>
+                  </a>
+                  <a
+                    href="#principal"
+                    onClick={onClose}
+                    className="p-3 rounded-lg border border-gray-200 hover:border-[#0A5C36] hover:bg-emerald-50/50 transition-colors block"
+                  >
+                    <div className="font-bold text-gray-900">Principal's Welcome Address</div>
+                    <div className="text-gray-500">Official message from the Office of the Principal</div>
+                  </a>
+                  <a
+                    href="#about"
+                    onClick={onClose}
+                    className="p-3 rounded-lg border border-gray-200 hover:border-[#0A5C36] hover:bg-emerald-50/50 transition-colors block"
+                  >
+                    <div className="font-bold text-gray-900">About Our School & Pillars</div>
+                    <div className="text-gray-500">Mission, Vision, PCEA sponsorship & values</div>
+                  </a>
+                  <a
+                    href="#gallery"
+                    onClick={onClose}
+                    className="p-3 rounded-lg border border-gray-200 hover:border-[#0A5C36] hover:bg-emerald-50/50 transition-colors block"
+                  >
+                    <div className="font-bold text-gray-900">Campus Photo Gallery</div>
+                    <div className="text-gray-500">Authentic Kenyan school life, science labs & sports</div>
+                  </a>
+                  <a
+                    href="#contact"
+                    onClick={onClose}
+                    className="p-3 rounded-lg border border-gray-200 hover:border-[#0A5C36] hover:bg-emerald-50/50 transition-colors block sm:col-span-2"
+                  >
+                    <div className="font-bold text-gray-900">Location Map & Direct Office Directory</div>
+                    <div className="text-gray-500">Campus coordinates (-1.168781, 36.670586), postal address & Direct Office Line</div>
+                  </a>
+                </div>
+              </div>
+
+              {/* Information Modals & Policy Pages */}
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 flex items-center gap-1.5">
+                  <BookOpen className="w-3.5 h-3.5 text-[#0A5C36]" />
+                  Institutional Information & Guidelines
+                </h4>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">Day & Boarding Care</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">School Uniform Guide</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">Academic Departments</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">School Heritage & History</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">Board of Management</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">Christian Union (C.U.)</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">Clubs & Societies</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">Sports & Athletics</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-200">
+                    <span className="font-semibold text-gray-800">PCEA Church Sponsorship</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Machine-Readable XML Sitemap & Search Engine Links */}
+              <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <div className="font-bold text-xs text-emerald-950 flex items-center gap-1.5">
+                    <FileCode className="w-4 h-4 text-[#0A5C36]" />
+                    Search Engine XML Sitemap
+                  </div>
+                  <p className="text-[11px] text-emerald-800 mt-0.5">
+                    Standard XML sitemap formatted for Google, Bing, and search crawlers.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="/sitemap.xml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#0A5C36] hover:bg-[#074528] text-white text-xs font-bold transition-colors"
+                  >
+                    <span>View sitemap.xml</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href="/robots.txt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-white border border-emerald-300 text-emerald-900 text-xs font-semibold hover:bg-emerald-100/50 transition-colors"
+                  >
+                    <span>robots.txt</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

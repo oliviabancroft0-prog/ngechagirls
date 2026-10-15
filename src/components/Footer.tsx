@@ -180,7 +180,7 @@ export const Footer: React.FC<FooterProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px]">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 text-[11px]">
             <button
               onClick={() => onNavigateSection('principal')}
               className="hover:text-[#D4AF37] transition-colors cursor-pointer"
@@ -194,6 +194,23 @@ export const Footer: React.FC<FooterProps> = ({
             >
               Limuru, Kiambu
             </button>
+            <span>•</span>
+            <button
+              onClick={() => onOpenModal('sitemap')}
+              className="hover:text-[#D4AF37] transition-colors cursor-pointer font-medium"
+            >
+              Site Index
+            </button>
+            <span>•</span>
+            <a
+              href="/sitemap.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#D4AF37] transition-colors font-mono text-[10px] bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800 text-emerald-200"
+              title="Open XML Sitemap"
+            >
+              sitemap.xml
+            </a>
           </div>
         </div>
       </div>
