@@ -93,7 +93,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
 
           {/* Description */}
           <p className="mt-5 text-base sm:text-lg text-gray-200 leading-relaxed max-w-2xl font-normal drop-shadow">
-            A distinguished public Christian-based secondary institution in Ngecha Town, Limuru, Kiambu County,
+            A distinguished public secondary institution in Ngecha Town, Limuru, Kiambu County,
             proudly sponsored by the <strong>Presbyterian Church of East Africa (PCEA)</strong>.
             Nurturing holistic academic achievement, Christian character, and confident female leadership.
           </p>
