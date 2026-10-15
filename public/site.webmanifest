@@ -1,0 +1,26 @@
+{
+  "name": "Ngecha Girls High School",
+  "short_name": "Ngecha Girls",
+  "description": "Official website of Ngecha Girls High School, Limuru, Kiambu County. Dream, Persist and Succeed.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A5C36",
+  "theme_color": "#0A5C36",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -83,11 +83,11 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
             </span>
           </div>
 
-          {/* Main Title - Stamford Park Trust style large typography */}
+          {/* Main Heading (H1) - Primary SEO & Semantic Page Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight sm:leading-[1.15] font-serif-heading drop-shadow-sm">
-            Ngecha Girls High School
+            <span className="block">Ngecha Girls High School</span>
             <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl text-[#F9E8A2] font-sans font-semibold">
-              Empowering Young Women in Faith & Knowledge
+              Empowering Young Women in Faith, Knowledge & Excellence
             </span>
           </h1>
 

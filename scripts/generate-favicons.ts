@@ -1,0 +1,176 @@
+import fs from 'fs';
+import path from 'path';
+import sharp from 'sharp';
+
+// High-fidelity square SVG favicon of the Ngecha Girls High School official crest / logo
+// Formatted in a 512x512 square viewport with circular background badge for optimal Google Search rendering
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#074528"/>
+      <stop offset="100%" stop-color="#042F1B"/>
+    </linearGradient>
+
+    <!-- Gold Metallic Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+
+    <!-- Shield Inner Gradient -->
+    <linearGradient id="shieldField" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF59D"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Arched text path for Top Banner -->
+    <path id="topBannerPath" d="M 105,116 Q 256,66 407,116" fill="none"/>
+    <!-- Arched text path for Bottom Ribbon -->
+    <path id="bottomBannerPath" d="M 120,442 Q 256,468 392,442" fill="none"/>
+  </defs>
+
+  <!-- 1. Circular base frame with official school green and gold ring -->
+  <circle cx="256" cy="256" r="248" fill="url(#bgGrad)"/>
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#goldGrad)" stroke-width="8"/>
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- 2. Latin Christian Cross at Top Center (PCEA Church Sponsorship) -->
+  <g filter="url(#dropShadow)">
+    <path d="M 248,34 L 264,34 L 264,52 L 282,52 L 282,66 L 264,66 L 264,96 L 248,96 L 248,66 L 230,66 L 230,52 L 248,52 Z" 
+          fill="url(#goldGrad)" stroke="#000000" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 3. MAIN SHIELD (COAT OF ARMS) -->
+  <g filter="url(#dropShadow)">
+    <!-- Outer Green Rim of Shield -->
+    <path d="M 100,140 Q 256,170 412,140 Q 402,285 256,380 Q 110,285 100,140 Z" 
+          fill="#0A5C36" stroke="#000000" stroke-width="4.5" stroke-linejoin="round"/>
+    
+    <!-- Inner Gold/Yellow Shield Field -->
+    <path d="M 112,150 Q 256,178 400,150 Q 390,275 256,364 Q 122,275 112,150 Z" 
+          fill="url(#shieldField)" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Subtle Green Inner Accent border -->
+    <path d="M 122,158 Q 256,184 390,158" 
+          fill="none" stroke="#0A5C36" stroke-width="2" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- 4. CROSSED PENS & PENCIL -->
+  <g>
+    <!-- Red Pencil (Diagonal Left-Down) -->
+    <g transform="rotate(-34 256 248)">
+      <rect x="249" y="180" width="14" height="110" fill="#D32F2F" stroke="#000000" stroke-width="2.5" rx="1"/>
+      <polygon points="249,290 263,290 256,314" fill="#FFE0B2" stroke="#000000" stroke-width="2.2"/>
+      <polygon points="253,306 259,306 256,314" fill="#1A1A1A"/>
+      <rect x="249" y="172" width="14" height="8" fill="#B0BEC5" stroke="#000000" stroke-width="2"/>
+    </g>
+    <!-- Black / Gold Fountain Pen (Diagonal Right-Down) -->
+    <g transform="rotate(34 256 248)">
+      <rect x="250" y="180" width="13" height="106" fill="#1A1A1A" stroke="#000000" stroke-width="2.5" rx="1"/>
+      <polygon points="250,286 263,286 256.5,312" fill="#D4AF37" stroke="#000000" stroke-width="2.2"/>
+      <polygon points="254,304 259,304 256.5,312" fill="#000000"/>
+      <rect x="250" y="172" width="13" height="8" fill="#D4AF37" stroke="#000000" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- 5. OPEN BOOK OF KNOWLEDGE (CENTERPIECE) -->
+  <g filter="url(#dropShadow)">
+    <!-- Book Pages Base -->
+    <path d="M 256,204 Q 212,194 168,206 L 168,284 Q 212,274 256,284 Z" 
+          fill="#FFFFFF" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M 256,204 Q 300,194 344,206 L 344,284 Q 300,274 256,284 Z" 
+          fill="#FFFFFF" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Spine Line -->
+    <line x1="256" y1="202" x2="256" y2="286" stroke="#000000" stroke-width="4"/>
+    
+    <!-- Left Page Ruled Lines -->
+    <line x1="180" y1="222" x2="242" y2="218" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180" y1="236" x2="242" y2="232" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180" y1="250" x2="242" y2="246" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180" y1="264" x2="236" y2="260" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Right Page Ruled Lines -->
+    <line x1="270" y1="218" x2="332" y2="222" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="270" y1="232" x2="332" y2="236" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="270" y1="246" x2="332" y2="250" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="276" y1="260" x2="332" y2="264" stroke="#90A4AE" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- 6. TOP GOLD ARCHED BANNER: NGECHA GIRLS HIGH SCHOOL -->
+  <g filter="url(#dropShadow)">
+    <path d="M 88,126 Q 256,66 424,126 L 416,88 Q 256,32 96,88 Z" 
+          fill="url(#goldGrad)" stroke="#000000" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Left fishtail -->
+    <path d="M 88,126 L 96,88 L 74,107 Z" fill="#D4AF37" stroke="#000000" stroke-width="2.5"/>
+    <!-- Right fishtail -->
+    <path d="M 424,126 L 416,88 L 438,107 Z" fill="#D4AF37" stroke="#000000" stroke-width="2.5"/>
+    
+    <text fill="#000000" font-size="20" font-weight="900" font-family="system-ui, -apple-system, sans-serif" letter-spacing="3.2" text-anchor="middle">
+      <textPath href="#topBannerPath" startOffset="50%">NGECHA GIRLS HIGH SCHOOL</textPath>
+    </text>
+  </g>
+
+  <!-- 7. BOTTOM MOTTO RIBBON: DREAM PERSIST AND SUCCEED -->
+  <g filter="url(#dropShadow)">
+    <path d="M 98,432 Q 256,478 414,432 L 406,464 Q 256,508 106,464 Z" 
+          fill="url(#goldGrad)" stroke="#000000" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Left notch -->
+    <path d="M 98,432 L 106,464 L 84,448 Z" fill="#D4AF37" stroke="#000000" stroke-width="2.5"/>
+    <!-- Right notch -->
+    <path d="M 414,432 L 406,464 L 428,448 Z" fill="#D4AF37" stroke="#000000" stroke-width="2.5"/>
+
+    <text fill="#000000" font-size="16" font-weight="900" font-family="system-ui, -apple-system, sans-serif" letter-spacing="3" text-anchor="middle">
+      <textPath href="#bottomBannerPath" startOffset="50%">DREAM • PERSIST • SUCCEED</textPath>
+    </text>
+  </g>
+</svg>`;
+
+async function generate() {
+  const publicDir = path.resolve('./public');
+  
+  // 1. Write the canonical SVG favicon
+  fs.writeFileSync(path.join(publicDir, 'favicon.svg'), svgContent.trim());
+  console.log('Created public/favicon.svg');
+
+  // Convert SVG buffer for sharp
+  const svgBuffer = Buffer.from(svgContent);
+
+  // 2. Generate Google Search and device icons
+  // Google recommends multiples of 48px: 48x48, 96x96, 144x144, 192x192
+  const sizes = [
+    { name: 'favicon-48x48.png', size: 48 },
+    { name: 'favicon-96x96.png', size: 96 },
+    { name: 'favicon-144x144.png', size: 144 },
+    { name: 'favicon-192x192.png', size: 192 },
+    { name: 'favicon-512x512.png', size: 512 },
+    { name: 'apple-touch-icon.png', size: 180 },
+    { name: 'favicon-32x32.png', size: 32 },
+    { name: 'favicon-16x16.png', size: 16 },
+  ];
+
+  for (const { name, size } of sizes) {
+    await sharp(svgBuffer)
+      .resize(size, size)
+      .png()
+      .toFile(path.join(publicDir, name));
+    console.log(`Generated public/${name} (${size}x${size})`);
+  }
+
+  // Also create a 48x48 / 32x32 favicon.ico
+  // A PNG renamed or encoded as ICO or a crisp 48x48 png served as favicon.ico works universally
+  const icoBuffer = await sharp(svgBuffer).resize(48, 48).png().toBuffer();
+  fs.writeFileSync(path.join(publicDir, 'favicon.ico'), icoBuffer);
+  console.log('Created public/favicon.ico');
+}
+
+generate().catch((err) => {
+  console.error('Error generating favicons:', err);
+  process.exit(1);
+});
